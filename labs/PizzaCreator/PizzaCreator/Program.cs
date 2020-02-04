@@ -12,7 +12,7 @@ namespace PizzaCreator
             Console.WriteLine("Welcome to Pizza Creator\nThis program was written by Zachary Hodgson\nClass: Into to C# Programming\nSemester: Fall 2020");
             var done = false;
             //Menu
-            do
+            doM
             {
                 switch (DisplayMenu())
                 {
