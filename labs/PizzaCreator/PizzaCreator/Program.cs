@@ -7,7 +7,9 @@ namespace PizzaCreator
 {
     class Program
     {
+
         static void Main(string[] args)
+
         {
             Console.WriteLine("Welcome to Pizza Creator\nThis program was written by Zachary Hodgson\nClass: Into to C# Programming\nSemester: Fall 2020");
             var done = false;
@@ -167,8 +169,9 @@ namespace PizzaCreator
             DisplayOrder();
         }
 
-        static int size;
+            static int size;
             static string sizes;
+
             static int meats;
             static int vegetables;
             static int sauce;
@@ -254,6 +257,8 @@ namespace PizzaCreator
 
             Console.WriteLine("Delivery ($2.50): " + delivery);
             Console.WriteLine("");
+
+            Console.WriteLine("Total: $" + total);
 
         }
         private static string ReadString ( string message, bool required )
@@ -412,6 +417,7 @@ namespace PizzaCreator
                     cprice = 0;
                 else if (String.Compare(cheeses, "2", true) == 0)
                     cprice = 1.25;
+           
             //Delivery Selection    
             delivery = ReadBoolean("Would you like delivery? ($2.50)\n");
             
