@@ -12,7 +12,7 @@ namespace PizzaCreator
             Console.WriteLine("Welcome to Pizza Creator\nThis program was written by Zachary Hodgson\nClass: Into to C# Programming\nSemester: Fall 2020");
             var done = false;
             //Menu
-            doM
+            do
             {
                 switch (DisplayMenu())
                 {
@@ -24,13 +24,21 @@ namespace PizzaCreator
 
         }
         
-            static string size;
+            static int size;
+            static string sizes;
             static int meats;
             static int vegetables;
             static int sauce;
             static int cheese;
             static bool delivery;
-        
+            static double sprice;
+            static double mprice;
+            static double vprice;
+            static double saprice;
+            static double cprice;
+            static double dprice;
+            static double total; // = sprice + mprice + vprice + saprice +cprice + dprice;
+
 
         private static bool ReadBoolean ( string message )
         {
@@ -119,7 +127,7 @@ namespace PizzaCreator
             do
             {
                 
-                if (!String.IsNullOrEmpty(size) )
+                if (!String.IsNullOrEmpty(sizes) )
                 {
                     overwrite = ReadBoolean("Would you like to overwrite your existing order?");
                     if (overwrite == false)
@@ -132,15 +140,35 @@ namespace PizzaCreator
                 }
             } while (overwrite == false);
 
-            size = ReadString("Enter Size\n1 for small($5)\n2 for medium($6.25)\n3 for large($8.75)\n", true);
-
+            size = ReadInt32("Enter Size\n1 for small($5)\n2 for medium($6.25)\n3 for large($8.75)\n", 1, 3);
+            sizes = size.ToString();
+            if (String.Compare(sizes, "1", true) == 0)
+                sprice = 5;
+            else if (String.Compare(sizes, "2", true) == 0)
+                sprice = 6.25;
+            else if (String.Compare(sizes, "3", true) == 0)
+                sprice = 8.75;
             meats = ReadInt32("Enter Meats ($0.75 per meat)\n1 for Bacon\n2 for Ham\n3 for Pepperoni\n4 for Sausage\n", 1, 4);
+
             vegetables = ReadInt32("Enter Vegetables ($0.50 per veggie)\n1 for Black Olives\n2 for Mushrooms\n3 for Olives\n4 for Peppers\n", 1, 4);
 
 
-            sauce = ReadInt32("Enter Sauce\n1 for Traditional ($0)\n2 for Garlic($1)\n3 for Oregano ($1)\n", 1, 4);
+            sauce = ReadInt32("Enter Sauce\n1 for Traditional ($0)\n2 for Garlic($1)\n3 for Oregano ($1)\n", 1, 3);
+            string sauces = sauce.ToString();
+            if (String.Compare(sauces, "1", true) == 0)
+                saprice = 0;
+            else if (String.Compare(sauces, "2", true) == 0)
+                saprice = 1;
+            else if (String.Compare(sauces, "3", true) == 0)
+                saprice = 1;
             cheese = ReadInt32("Enter Cheese\n 1 for Regular($0)\n2 for Extra($1.25)\n", 1, 2);
+            string cheeses = cheese.ToString();
+            if (String.Compare(cheeses, "1", true) == 0)
+                cprice = 0;
+            else if (String.Compare(cheeses, "2", true) == 0)
+                cprice = 1.25;
             delivery = ReadBoolean("Would you like delivery? ($2.50)\n");
+            total = sprice + mprice + vprice + saprice +cprice + dprice;
 
         }
 
@@ -155,8 +183,7 @@ namespace PizzaCreator
             //Writes Menu in the console
             do
             {
-                string total = "1001";
-                Console.WriteLine("Total: " + total);
+                Console.WriteLine("Total: $" + total);
                 Console.WriteLine("A)dd Food to order");
                 Console.WriteLine("D)isplay Order");
                 Console.WriteLine("Q)uit");
