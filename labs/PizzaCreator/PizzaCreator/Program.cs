@@ -154,9 +154,9 @@ namespace PizzaCreator
                 cprice = 0;
             else if (String.Compare(cheeses, "2", true) == 0)
                 cprice = 1.25;
-            
-            
-            
+
+
+            Console.WriteLine("Current Delivery Selection ($2.50): " + delivery);
             //Delivery Selection    
             delivery = ReadBoolean("Would you like delivery? ($2.50)\n");
 
