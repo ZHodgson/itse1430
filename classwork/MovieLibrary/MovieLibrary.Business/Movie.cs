@@ -8,9 +8,12 @@ namespace MovieLibrary.Business
     /// </remarks>
     public class Movie
     {
+        public Genre Genre { get; set; }
+
         /// <summary>Gets or sets the title.</summary>
         public string Title
         {
+            //Never return null from a string property, always return empty string
             get {
                 //Long, long way
                 //if (_title == null)
@@ -21,9 +24,11 @@ namespace MovieLibrary.Business
                 //Long way
                 //return (_title != null) ? _title : "";
 
-                //Correct
+                //Correct - use null coalesce operator
                 return _title ?? "";
             }
+
+            //Use null conditional operator if instance value can be null
             set { _title = value?.Trim(); }
         }
         private string _title;
@@ -53,6 +58,7 @@ namespace MovieLibrary.Business
         //    set { _releaseYear = value; }
         //}
         //private int _releaseYear = 1900;
+        //Can use auto property with default value for underlying field
         public int ReleaseYear { get; set; } = 1900;
 
         /// <summary>Determines if this is a classic movie.</summary>
@@ -64,11 +70,11 @@ namespace MovieLibrary.Business
         //private bool _isClassic;
         public bool IsClassic { get; set; }
 
+        //Calculated property, no setter
         public bool IsBlackAndWhite
         {
             get { return ReleaseYear <= 1930; }
         }
-      
 
         //public int Id
         //{
@@ -76,7 +82,9 @@ namespace MovieLibrary.Business
         //    private set { _id = value; }
         //}
         //private int _id;
+        //Public getter, private setter using auto property syntax
         public int Id { get; }
+
         public bool Validate ( out string error )
         {
             //Title is required

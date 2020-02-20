@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using MovieLibrary.Business;
 
 namespace MovieLibrary.Winforms
@@ -15,7 +9,8 @@ namespace MovieLibrary.Winforms
     {
         #region Constructors
 
-        public MovieForm ()
+        //If no constructor specified then base default constructor is called automatically
+        public MovieForm () //: base()
         {
             InitializeComponent();
         }
@@ -75,6 +70,10 @@ namespace MovieLibrary.Winforms
         {
             base.OnLoad(e);
 
+            //Populate combo
+            var genres = Genres.GetAll();
+            ddlGenres.Items.AddRange(genres);
+
             if (Movie != null)
             {
                 txtTitle.Text = Movie.Title;
@@ -82,6 +81,9 @@ namespace MovieLibrary.Winforms
                 txtReleaseYear.Text = Movie.ReleaseYear.ToString();
                 txtRunLength.Text = Movie.RunLength.ToString();
                 chkIsClassic.Checked = Movie.IsClassic;
+
+                if (Movie.Genre != null)
+                    ddlGenres.SelectedText = Movie.Genre.Description;
             };
         }
 
@@ -89,12 +91,28 @@ namespace MovieLibrary.Winforms
         {
             var movie = new Movie();
 
-            //Null conditionals
+            //Null conditional
             movie.Title = txtTitle.Text?.Trim();
             movie.RunLength = GetAsInt32(txtRunLength);
             movie.ReleaseYear = GetAsInt32(txtReleaseYear, 1900);
             movie.Description = txtDescription.Text.Trim();
             movie.IsClassic = chkIsClassic.Checked;
+
+            //movie.Genre = (Genre)ddlGenres.SelectedItem; //C-style, crashes if wrong
+
+            //Preferred - as operator
+            //var genre = ddlGenres.SelectedItem as Genre; 
+            //if (genre != null)
+            //    movie.Genre = genre;
+
+            //Equivalent of as
+            //if (ddlGenres.SelectedItem is Genre)
+            //    genre = (Genre)ddlGenres.SelectedItem;
+
+            //Pattern match
+            if (ddlGenres.SelectedItem is Genre genre)
+                movie.Genre = genre;
+            //movie.Genre = ddlGenres.SelectedItem;
 
             return movie;
         }
