@@ -85,6 +85,11 @@ namespace MovieLibrary.Business
         //Public getter, private setter using auto property syntax
         public int Id { get; }
 
+        public override string ToString ()
+        {
+            return Title;
+        }
+
         public bool Validate ( out string error )
         {
             //Title is required
