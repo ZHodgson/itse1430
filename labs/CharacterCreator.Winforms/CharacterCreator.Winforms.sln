@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterCreator.Winforms", "MovieLibrary\CharacterCreator.Winforms.csproj", "{650D3DBB-FA5C-49F2-BFD0-91D11E592D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterCreator.Business", "MovieLibrary.Business\CharacterCreator.Business.csproj", "{22E7D082-AD7E-4526-B188-5EAACAA5E00E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{650D3DBB-FA5C-49F2-BFD0-91D11E592D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650D3DBB-FA5C-49F2-BFD0-91D11E592D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650D3DBB-FA5C-49F2-BFD0-91D11E592D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650D3DBB-FA5C-49F2-BFD0-91D11E592D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E7D082-AD7E-4526-B188-5EAACAA5E00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E7D082-AD7E-4526-B188-5EAACAA5E00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E7D082-AD7E-4526-B188-5EAACAA5E00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E7D082-AD7E-4526-B188-5EAACAA5E00E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {204B2CBC-0298-4338-BCC7-69C186464934}
+	EndGlobalSection
+EndGlobal
