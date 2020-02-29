@@ -7,8 +7,8 @@
     <ProjectGuid>{22E7D082-AD7E-4526-B188-5EAACAA5E00E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MovieLibrary.Business</RootNamespace>
-    <AssemblyName>MovieLibrary.Business</AssemblyName>
+    <RootNamespace>CharacterCreator.Business</RootNamespace>
+    <AssemblyName>CharacterCreator.Business</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

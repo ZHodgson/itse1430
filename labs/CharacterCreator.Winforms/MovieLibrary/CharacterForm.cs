@@ -77,7 +77,7 @@ namespace CharacterCreator.Winforms
                 if (Character.CharacterRace != null)
                     ddlRace.SelectedText = Character.CharacterRace.Description;
 
-                ValidateChildren();
+                //ValidateChildren();
             };
         }
 
