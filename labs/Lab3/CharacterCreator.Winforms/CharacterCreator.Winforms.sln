@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterCreator.Winforms", "CharacterCreator.Winforms.csproj", "{81EC51FF-179D-40F5-B10B-30F154DD9EE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterCreator", "..\CharacterCreator\CharacterCreator.csproj", "{4DA7E256-D668-4368-B55E-4DFF4DDDCEAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterCreator.Business", "..\CharacterCreator\CharacterCreator.Business.csproj", "{4DA7E256-D668-4368-B55E-4DFF4DDDCEAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

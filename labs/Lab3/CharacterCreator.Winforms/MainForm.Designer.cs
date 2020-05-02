@@ -128,13 +128,13 @@ namespace CharacterCreator.Winforms
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.OnHelpAbout);
             // 
-            // lstToons
+            // lstCharacters
             // 
             this.lstCharacters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstCharacters.FormattingEnabled = true;
             this.lstCharacters.Location = new System.Drawing.Point(0, 24);
             this.lstCharacters.Margin = new System.Windows.Forms.Padding(2);
-            this.lstCharacters.Name = "lstToons";
+            this.lstCharacters.Name = "lstCharacters";
             this.lstCharacters.Size = new System.Drawing.Size(284, 387);
             this.lstCharacters.TabIndex = 1;
             // 

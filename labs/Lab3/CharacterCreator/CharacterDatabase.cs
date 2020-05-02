@@ -127,6 +127,7 @@ namespace CharacterCreator
         private Character DuplicateCharacter ( Character character )
         {
             var item = new Character();
+            
             CopyCharacter(item, character, true);
 
             return item;

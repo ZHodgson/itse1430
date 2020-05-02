@@ -18,6 +18,13 @@ namespace CharacterCreator
 {
     public class Character : IValidatableObject
     {
+        private string _name;
+
+        private string _race;
+        
+        private string _profession;
+        
+        private string _description;
         public string Name
         {
             get { return _name ?? "";  }
@@ -89,10 +96,5 @@ namespace CharacterCreator
                 yield return new ValidationResult("Please pick a race.", new[] { nameof(Race) });
             };
         }
-
-        private string _name;
-        private string _race;
-        private string _profession;
-        private string _description;
     }
 }

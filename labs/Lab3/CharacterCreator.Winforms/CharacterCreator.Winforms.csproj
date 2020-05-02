@@ -84,12 +84,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterCreatorForm.resx">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,9 +117,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CharacterCreator\CharacterCreator.csproj">
+    <ProjectReference Include="..\CharacterCreator\CharacterCreator.Business.csproj">
       <Project>{4da7e256-d668-4368-b55e-4dff4dddceaa}</Project>
-      <Name>CharacterCreator</Name>
+      <Name>CharacterCreator.Business</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

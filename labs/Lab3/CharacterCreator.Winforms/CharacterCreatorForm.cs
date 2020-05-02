@@ -67,7 +67,7 @@ namespace CharacterCreator.Winforms
 
             if (errors.Any())
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Please use all of your remaining points.");
                 return;
             }
 
@@ -224,10 +224,6 @@ namespace CharacterCreator.Winforms
             }
         }
 
-        private void CharacterCreatorForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void OnValidateName(object sender, CancelEventArgs e)
         {

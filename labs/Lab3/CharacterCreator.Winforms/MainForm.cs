@@ -38,8 +38,6 @@ namespace CharacterCreator.Winforms
             about.ShowDialog(this);
         }
 
-        //private CharacterCreator _newToon = new CharacterCreator();
-
         private void OnNew ( object sender, EventArgs e )
         {
             var child = new CharacterCreatorForm();

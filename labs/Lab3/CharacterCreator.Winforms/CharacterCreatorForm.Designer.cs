@@ -40,7 +40,7 @@ namespace CharacterCreator.Winforms
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblPoints = new System.Windows.Forms.Label();
-            this.lblClass = new System.Windows.Forms.Label();
+            this.lblProfession = new System.Windows.Forms.Label();
             this.lblRace = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,9 +77,9 @@ namespace CharacterCreator.Winforms
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.Location = new System.Drawing.Point(87, 6);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(101, 20);
+            this.txtName.Size = new System.Drawing.Size(135, 20);
             this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.OnValidateName);
@@ -87,8 +87,8 @@ namespace CharacterCreator.Winforms
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(259, 384);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(175, 447);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(56, 23);
             this.btnSave.TabIndex = 20;
@@ -100,8 +100,8 @@ namespace CharacterCreator.Winforms
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(324, 384);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(235, 447);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(56, 23);
             this.btnCancel.TabIndex = 21;
@@ -119,15 +119,15 @@ namespace CharacterCreator.Winforms
             this.lblPoints.TabIndex = 23;
             this.lblPoints.Text = "Points Left";
             // 
-            // lblClass
+            // lblProfession
             // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(11, 39);
-            this.lblClass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(56, 13);
-            this.lblClass.TabIndex = 30;
-            this.lblClass.Text = "Profession";
+            this.lblProfession.AutoSize = true;
+            this.lblProfession.Location = new System.Drawing.Point(11, 39);
+            this.lblProfession.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProfession.Name = "lblProfession";
+            this.lblProfession.Size = new System.Drawing.Size(56, 13);
+            this.lblProfession.TabIndex = 30;
+            this.lblProfession.Text = "Profession";
             // 
             // lblRace
             // 
@@ -142,7 +142,7 @@ namespace CharacterCreator.Winforms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 102);
+            this.label5.Location = new System.Drawing.Point(11, 100);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
@@ -152,7 +152,7 @@ namespace CharacterCreator.Winforms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 127);
+            this.label1.Location = new System.Drawing.Point(11, 130);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
@@ -172,7 +172,7 @@ namespace CharacterCreator.Winforms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 160);
+            this.label3.Location = new System.Drawing.Point(12, 158);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
@@ -199,19 +199,19 @@ namespace CharacterCreator.Winforms
             this.label7.TabIndex = 22;
             this.label7.Text = "Description";
             // 
-            // richTextBio
+            // richTextDescription
             // 
             this.richTextDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextDescription.Location = new System.Drawing.Point(14, 301);
-            this.richTextDescription.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextDescription.Name = "richTextBio";
-            this.richTextDescription.Size = new System.Drawing.Size(241, 106);
+            this.richTextDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextDescription.Name = "richTextDescription";
+            this.richTextDescription.Size = new System.Drawing.Size(279, 142);
             this.richTextDescription.TabIndex = 19;
             this.richTextDescription.Text = "";
             // 
-            // comboBoxClass
+            // comboBoxProfession
             // 
             this.comboBoxProfession.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -224,9 +224,9 @@ namespace CharacterCreator.Winforms
             "Rogue",
             "Wizard"});
             this.comboBoxProfession.Location = new System.Drawing.Point(87, 36);
-            this.comboBoxProfession.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxProfession.Name = "comboBoxClass";
-            this.comboBoxProfession.Size = new System.Drawing.Size(101, 21);
+            this.comboBoxProfession.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxProfession.Name = "comboBoxProfession";
+            this.comboBoxProfession.Size = new System.Drawing.Size(135, 21);
             this.comboBoxProfession.Sorted = true;
             this.comboBoxProfession.TabIndex = 1;
             this.comboBoxProfession.Validating += new System.ComponentModel.CancelEventHandler(this.OnValidateProfession);
@@ -244,9 +244,9 @@ namespace CharacterCreator.Winforms
             "Half Elf",
             "Human"});
             this.comboBoxRace.Location = new System.Drawing.Point(87, 66);
-            this.comboBoxRace.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxRace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxRace.Name = "comboBoxRace";
-            this.comboBoxRace.Size = new System.Drawing.Size(101, 21);
+            this.comboBoxRace.Size = new System.Drawing.Size(135, 21);
             this.comboBoxRace.Sorted = true;
             this.comboBoxRace.TabIndex = 2;
             this.comboBoxRace.Validating += new System.ComponentModel.CancelEventHandler(this.OnValidateRace);
@@ -254,7 +254,7 @@ namespace CharacterCreator.Winforms
             // txtPointsRemaining
             // 
             this.txtPointsRemaining.Location = new System.Drawing.Point(121, 245);
-            this.txtPointsRemaining.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPointsRemaining.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPointsRemaining.Name = "txtPointsRemaining";
             this.txtPointsRemaining.ReadOnly = true;
             this.txtPointsRemaining.Size = new System.Drawing.Size(41, 20);
@@ -274,7 +274,7 @@ namespace CharacterCreator.Winforms
             // btnPlusStr
             // 
             this.btnPlusStr.Location = new System.Drawing.Point(141, 99);
-            this.btnPlusStr.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlusStr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlusStr.Name = "btnPlusStr";
             this.btnPlusStr.Size = new System.Drawing.Size(21, 18);
             this.btnPlusStr.TabIndex = 4;
@@ -285,7 +285,7 @@ namespace CharacterCreator.Winforms
             // btnMinStr
             // 
             this.btnMinStr.Location = new System.Drawing.Point(166, 99);
-            this.btnMinStr.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinStr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinStr.Name = "btnMinStr";
             this.btnMinStr.Size = new System.Drawing.Size(21, 18);
             this.btnMinStr.TabIndex = 5;
@@ -293,51 +293,51 @@ namespace CharacterCreator.Winforms
             this.btnMinStr.UseVisualStyleBackColor = true;
             this.btnMinStr.Click += new System.EventHandler(this.SubtractStrength);
             // 
-            // txtStr
+            // txtStrength
             // 
             this.txtStrength.Location = new System.Drawing.Point(110, 99);
-            this.txtStrength.Margin = new System.Windows.Forms.Padding(2);
-            this.txtStrength.Name = "txtStr";
+            this.txtStrength.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStrength.Name = "txtStrength";
             this.txtStrength.ReadOnly = true;
             this.txtStrength.Size = new System.Drawing.Size(27, 20);
             this.txtStrength.TabIndex = 3;
             this.txtStrength.Text = "50";
             // 
-            // txtInt
+            // txtIntelligence
             // 
             this.txtIntelligence.Location = new System.Drawing.Point(110, 127);
-            this.txtIntelligence.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIntelligence.Name = "txtInt";
+            this.txtIntelligence.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIntelligence.Name = "txtIntelligence";
             this.txtIntelligence.ReadOnly = true;
             this.txtIntelligence.Size = new System.Drawing.Size(27, 20);
             this.txtIntelligence.TabIndex = 6;
             this.txtIntelligence.Text = "50";
             // 
-            // txtAgi
+            // txtAgility
             // 
             this.txtAgility.Location = new System.Drawing.Point(110, 157);
-            this.txtAgility.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAgility.Name = "txtAgi";
+            this.txtAgility.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAgility.Name = "txtAgility";
             this.txtAgility.ReadOnly = true;
             this.txtAgility.Size = new System.Drawing.Size(27, 20);
             this.txtAgility.TabIndex = 9;
             this.txtAgility.Text = "50";
             // 
-            // txtCon
+            // txtConstitution
             // 
             this.txtConstitution.Location = new System.Drawing.Point(110, 186);
-            this.txtConstitution.Margin = new System.Windows.Forms.Padding(2);
-            this.txtConstitution.Name = "txtCon";
+            this.txtConstitution.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConstitution.Name = "txtConstitution";
             this.txtConstitution.ReadOnly = true;
             this.txtConstitution.Size = new System.Drawing.Size(27, 20);
             this.txtConstitution.TabIndex = 12;
             this.txtConstitution.Text = "50";
             // 
-            // txtCha
+            // txtCharisma
             // 
             this.txtCharisma.Location = new System.Drawing.Point(110, 212);
-            this.txtCharisma.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCharisma.Name = "txtCha";
+            this.txtCharisma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCharisma.Name = "txtCharisma";
             this.txtCharisma.ReadOnly = true;
             this.txtCharisma.Size = new System.Drawing.Size(27, 20);
             this.txtCharisma.TabIndex = 15;
@@ -346,7 +346,7 @@ namespace CharacterCreator.Winforms
             // btnPlusInt
             // 
             this.btnPlusInt.Location = new System.Drawing.Point(142, 127);
-            this.btnPlusInt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlusInt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlusInt.Name = "btnPlusInt";
             this.btnPlusInt.Size = new System.Drawing.Size(21, 18);
             this.btnPlusInt.TabIndex = 7;
@@ -357,7 +357,7 @@ namespace CharacterCreator.Winforms
             // btnPlusAgi
             // 
             this.btnPlusAgi.Location = new System.Drawing.Point(142, 157);
-            this.btnPlusAgi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlusAgi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlusAgi.Name = "btnPlusAgi";
             this.btnPlusAgi.Size = new System.Drawing.Size(21, 18);
             this.btnPlusAgi.TabIndex = 10;
@@ -368,7 +368,7 @@ namespace CharacterCreator.Winforms
             // btnPlusCon
             // 
             this.btnPlusCon.Location = new System.Drawing.Point(142, 186);
-            this.btnPlusCon.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlusCon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlusCon.Name = "btnPlusCon";
             this.btnPlusCon.Size = new System.Drawing.Size(21, 18);
             this.btnPlusCon.TabIndex = 13;
@@ -379,7 +379,7 @@ namespace CharacterCreator.Winforms
             // btnPlusCha
             // 
             this.btnPlusCha.Location = new System.Drawing.Point(142, 212);
-            this.btnPlusCha.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlusCha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlusCha.Name = "btnPlusCha";
             this.btnPlusCha.Size = new System.Drawing.Size(21, 18);
             this.btnPlusCha.TabIndex = 16;
@@ -390,7 +390,7 @@ namespace CharacterCreator.Winforms
             // btnMinInt
             // 
             this.btnMinInt.Location = new System.Drawing.Point(166, 127);
-            this.btnMinInt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinInt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinInt.Name = "btnMinInt";
             this.btnMinInt.Size = new System.Drawing.Size(21, 18);
             this.btnMinInt.TabIndex = 8;
@@ -401,7 +401,7 @@ namespace CharacterCreator.Winforms
             // btnMinAgi
             // 
             this.btnMinAgi.Location = new System.Drawing.Point(166, 157);
-            this.btnMinAgi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinAgi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinAgi.Name = "btnMinAgi";
             this.btnMinAgi.Size = new System.Drawing.Size(21, 18);
             this.btnMinAgi.TabIndex = 11;
@@ -412,7 +412,7 @@ namespace CharacterCreator.Winforms
             // btnMinCon
             // 
             this.btnMinCon.Location = new System.Drawing.Point(166, 186);
-            this.btnMinCon.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinCon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinCon.Name = "btnMinCon";
             this.btnMinCon.Size = new System.Drawing.Size(21, 18);
             this.btnMinCon.TabIndex = 14;
@@ -423,7 +423,7 @@ namespace CharacterCreator.Winforms
             // btnMinCha
             // 
             this.btnMinCha.Location = new System.Drawing.Point(166, 212);
-            this.btnMinCha.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinCha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinCha.Name = "btnMinCha";
             this.btnMinCha.Size = new System.Drawing.Size(21, 18);
             this.btnMinCha.TabIndex = 17;
@@ -443,7 +443,7 @@ namespace CharacterCreator.Winforms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(391, 419);
+            this.ClientSize = new System.Drawing.Size(302, 479);
             this.Controls.Add(this.btnMinCha);
             this.Controls.Add(this.btnMinCon);
             this.Controls.Add(this.btnMinAgi);
@@ -471,21 +471,20 @@ namespace CharacterCreator.Winforms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblRace);
-            this.Controls.Add(this.lblClass);
+            this.Controls.Add(this.lblProfession);
             this.Controls.Add(this.lblPoints);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtName);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.MaximumSize = new System.Drawing.Size(1450, 928);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(407, 458);
+            this.MinimumSize = new System.Drawing.Size(318, 367);
             this.Name = "CharacterCreatorForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create New Character";
-            this.Load += new System.EventHandler(this.CharacterCreatorForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this._errors)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -497,7 +496,7 @@ namespace CharacterCreator.Winforms
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblPoints;
-        private System.Windows.Forms.Label lblClass;
+        private System.Windows.Forms.Label lblProfession;
         private System.Windows.Forms.Label lblRace;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
